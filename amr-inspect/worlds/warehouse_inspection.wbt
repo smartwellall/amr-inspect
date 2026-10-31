@@ -1,0 +1,270 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        0.8
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.2251896907941294 0.5175012772921935 0.8255192494188084 0.970215684122633
+  position -8.31045002744174 -4.783802239193854 5.157733608864218
+  follow "Pioneer 3-DX"
+  followType "Pan and Tilt Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation 0 0 -0.01
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/industrial_concrete.jpg"
+          ]
+        }
+        roughness 0.35
+        metalness 0.05
+        textureTransform TextureTransform {
+          scale 4 4
+        }
+      }
+      geometry Box {
+        size 7 7 0.02
+      }
+    }
+  ]
+  name "floor_industrial"
+  boundingObject Box {
+    size 7 7 0.02
+  }
+  locked TRUE
+}
+Solid {
+  translation 0 3.45 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.28 0.32 0.38
+        roughness 0.6
+      }
+      geometry Box {
+        size 7 0.1 0.6
+      }
+    }
+  ]
+  name "wall_north"
+  boundingObject Box {
+    size 7 0.1 0.6
+  }
+}
+Solid {
+  translation 0 -3.45 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.28 0.32 0.38
+        roughness 0.6
+      }
+      geometry Box {
+        size 7 0.1 0.6
+      }
+    }
+  ]
+  name "wall_south"
+  boundingObject Box {
+    size 7 0.1 0.6
+  }
+}
+Solid {
+  translation -3.45 0 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.28 0.32 0.38
+        roughness 0.6
+      }
+      geometry Box {
+        size 0.1 7 0.6
+      }
+    }
+  ]
+  name "wall_west"
+  boundingObject Box {
+    size 0.1 7 0.6
+  }
+}
+Solid {
+  translation 3.45 0 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.28 0.32 0.38
+        roughness 0.6
+      }
+      geometry Box {
+        size 0.1 7 0.6
+      }
+    }
+  ]
+  name "wall_east"
+  boundingObject Box {
+    size 0.1 7 0.6
+  }
+}
+Solid {
+  translation 1 -0.8 0.3
+  rotation 0 0 1 0.25
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/cardboard_box.jpg"
+          ]
+        }
+        roughness 0.85
+      }
+      geometry Box {
+        size 0.6 0.6 0.6
+      }
+    }
+  ]
+  name "caja_carton_1"
+  boundingObject Box {
+    size 0.6 0.6 0.6
+  }
+}
+Solid {
+  translation -0.845716 -1.33301 0.21
+  rotation 0 0 1 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/cardboard_box.jpg"
+          ]
+        }
+        roughness 0.85
+      }
+      geometry Box {
+        size 0.45 0.45 0.4
+      }
+    }
+  ]
+  name "caja_carton_apilada"
+  boundingObject Box {
+    size 0.45 0.45 0.4
+  }
+}
+Solid {
+  translation -1.3 0.9 0.275
+  rotation 0 0 1 -0.4
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/cardboard_box.jpg"
+          ]
+        }
+        roughness 0.85
+      }
+      geometry Box {
+        size 0.7 0.55 0.5
+      }
+    }
+  ]
+  name "caja_carton_2"
+  boundingObject Box {
+    size 0.7 0.55 0.5
+  }
+}
+Solid {
+  translation 1.16 1.5 0.25
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/cardboard_box.jpg"
+          ]
+        }
+        roughness 0.85
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "caja_carton_3"
+  boundingObject Box {
+    size 0.5 0.5 0.5
+  }
+}
+Solid {
+  translation 0 1.55 0.3
+  rotation 1 0 0 4.692820414042842e-06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.95 0.1 0.05
+        roughness 0.25
+        metalness 0.3
+      }
+      geometry Cylinder {
+        height 0.6
+        radius 0.18
+      }
+    }
+  ]
+  name "alerta_seguridad_quimica"
+  boundingObject Cylinder {
+    height 0.6
+    radius 0.18
+  }
+}
+DEF PIONEER_3DX Pioneer3dx {
+  hidden position_0_0 12.566146313010304
+  hidden position_0_1 376.53870665910983
+  hidden position_0_2 345.2596903897115
+  hidden linearVelocity_0 0.09542131193694135 0.3982273766685456 -1.3228491679155355e-08
+  hidden angularVelocity_0 1.3663048041807355e-06 6.314469107986113e-06 0.0001251014458216384
+  hidden rotation_1 0.5772639355578822 -0.5773934311608422 -0.5773934311685014 2.0945245052849755
+  hidden position_1_0 -930.4207406012844
+  hidden linearVelocity_1 0.09545212718636054 0.3982199914835312 8.046211953230715e-09
+  hidden angularVelocity_1 1.0307830431235187e-06 4.919022026145526e-06 0.00012550419242360862
+  hidden rotation_2 -1 0 0 0.5093151387055664
+  hidden linearVelocity_2 0.09546851603423737 0.39821607113650387 9.409731686110974e-09
+  hidden angularVelocity_2 -10.61898507326702 2.546286484640357 0.00022411974385645001
+  hidden rotation_4 0.6466221342287428 -0.6466221485320355 -0.40467222854216217 2.3725372270113287
+  hidden linearVelocity_4 0.09540351066204501 0.3982203316254582 1.02390154776899e-06
+  hidden angularVelocity_4 -4.084440766236718 0.9784309683656685 0.00012942352908232289
+  hidden rotation_9 -0.6291453861004865 0.6291453963093132 0.45645608052830966 3.998012393646936
+  hidden linearVelocity_9 0.09540786423041055 0.39824188236556096 -1.0628795950293863e-06
+  hidden angularVelocity_9 -4.08444482575924 0.9784320705794226 0.000129209244801999
+  translation -2.4560062915245835 1.506163601921091 0.09615845640842915
+  rotation -0.018357644651411473 0.023273547183313245 -0.9995605728940886 -1.3361064383188275
+  controller "pac_controller"
+  extensionSlot [
+    Camera {
+      name "camera"
+      translation 0.15 0 0.2
+      fieldOfView 1.1
+      width 640
+      height 480
+    }
+  ]
+}
